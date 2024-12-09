@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>string</title>
+</head>
+<body>
+<center>
+<h1>STRING FUNCTIONS</h1>
+<table style=background-color:cadetblue>
+<tr>
+<td>Enter the string</td>
+<td></td>
+<td><input type=text name="in1" id="in1"></td>
+</tr>
+<tr>
+<td>search the string</td>
+<td></td>
+<td><input type=text name="in2" id="in2"></td>
+</tr>
+<tr>
+<td>slice the string</td>
+<td></td>
+<td><input type="number" name="in3" id="in3" placeholder="start"></td>
+<td><input type="number" name="in4" id="in4" placeholder="stop"></td>
+</tr>
+<tr>
+<td>Enter the substring to replace</td>
+<td></td>
+<td><input type=text name="in5" id="in5"></td>
+</tr>
+<tr>
+<td>Enter the string to replace</td>
+<td></td>
+<td><input type=text name="in9" id="in9"></td>
+</tr>
+<tr>
+<td>enter a string concat </td>
+<td></td>
+<td><input type=text name="in7" id="in7"></td>
+</tr>
+<tr>
+<td>enter a string pad</td>
+<td></td>
+<td><input type=text name="in8" id="in8"></td>
+</tr>
+<tr>
+<td><button type="submit" id="con" onclick="submit()">SUBMIT</button></
+td>
+</tr>
+</table>
+<table align="center" width="50%" style="background-color:beige" >
+<tr>
+<td>length of string:</td>
+<td><span id="out1"></span></td>
+</tr>
+<tr>
+<td>index of string:</td>
+<td><span id="out2"></span></td>
+</tr>
+<tr>
+<td>slice the string:</td>
+<td><span id="out3"></span></td>
+</tr>
+<tr>
+<td>substring of string:</td>
+<td><span id="out4"></span></td>
+</tr>
+<tr>
+<td>replace the string:</td>
+<td><span id="out5"></span></td>
+</tr>
+<tr>
+<td>uppercase of string:</td>
+<td><span id="out6"></span></td>
+</tr>
+<tr>
+<td>lowercase of string:</td>
+<td><span id="out7"></span></td>
+</tr>
+<tr>
+<td>concatenated of string:</td>
+<td><span id="out8"></span></td>
+</tr>
+<tr>
+<td>padding at beginning of string:</td>
+<td><span id="out9"></span></td>
+</tr>
+<tr>
+<td>padding at end of string:</td>
+<td><span id="out10"></span></td>
+</tr>
+<tr>
+<td>substring of string:</td>
+<td><span id="out11"></span></td>
+</tr>
+</table>
+</center>
+<script>
+function submit(){
+var in1=document.getElementById("in1").value;
+var in2=document.getElementById("in2").value;
+var in3=document.getElementById("in3").value;
+var in4=document.getElementById("in4").value;
+var in5=document.getElementById("in5").value;
+var in9=document.getElementById("in9").value;
+var in7=document.getElementById("in7").value;
+var in8=document.getElementById("in8").value;
+out1=in1.length;
+document.getElementById("out1").innerHTML=out1;out2=in1.indexOf(in2);
+document.getElementById("out2").innerHTML=out2;out3=in1.slice(in3,in4);
+document.getElementById("out3").innerHTML=out3;out4=in1.substr(in5,in4);
+document.getElementById("out4").innerHTML=out4;out5=in1.replace(in5,in9);
+document.getElementById("out5").innerHTML=out5;out6=in1.toUpperCase();
+document.getElementById("out6").innerHTML=out6;out7=in1.toLowerCase();
+document.getElementById("out7").innerHTML=out7;out8=in1.concat(in7);
+document.getElementById("out8").innerHTML=out8;out9=in1.padStart(30,in8);
+document.getElementById("out9").innerHTML=out9;out10=in1.padEnd(30,in8);
+document.getElementById("out10").innerHTML=out10;out11=in1.substring(in3,in4);
+document.getElementById("out11").innerHTML=out11;
+}
+</script>
+</body>
+</html>
